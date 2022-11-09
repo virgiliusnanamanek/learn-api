@@ -1,0 +1,19 @@
+{
+  "name": "learn-api",
+  "version": "1.0.0",
+  "description": "Learning API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/virgiliusnanamanek/learn-api.git"
+  },
+  "author": "Virgilius Nana Manek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/virgiliusnanamanek/learn-api/issues"
+  },
+  "homepage": "https://github.com/virgiliusnanamanek/learn-api#readme"
+}
