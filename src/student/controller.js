@@ -56,8 +56,26 @@ const addNewStudent = (req, res) => {
   });
 };
 
+const updateStudent = (req, res) => {
+  const id = parseInt(req.params.id);
+  const { name, email, age, dob } = req.body;
+
+  pool.query(
+    queries.updateStudent,
+    [name, email, age, dob, id],
+    (err, results) => {
+      if (err) {
+        throw err;
+      }
+
+      res.status(200).json({ message: "Student updated successfully" });
+    }
+  );
+};
+
 module.exports = {
   getStudents,
   getStudentById,
   addNewStudent,
+  updateStudent,
 };
