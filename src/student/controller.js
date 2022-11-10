@@ -73,9 +73,24 @@ const updateStudent = (req, res) => {
   );
 };
 
+const deleteStudent = (req, res) => {
+  const id = parseInt(req.params.id);
+
+  pool.query(queries.deleteStudent, [id], (err, results) => {
+    if (err) {
+      throw err;
+    } else if (!results.rowCount) {
+      res.status(404).json({ message: "Student not found" });
+    } else {
+      res.status(200).json({ message: "Student deleted successfully" });
+    }
+  });
+};
+
 module.exports = {
   getStudents,
   getStudentById,
   addNewStudent,
   updateStudent,
+  deleteStudent,
 };
