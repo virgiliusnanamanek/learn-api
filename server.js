@@ -4,6 +4,8 @@ const studentRoutes = require("./src/student/routes");
 const app = express();
 const PORT = 8000;
 
+app.use(express.json());
+
 app.get("/", (req, res) => {
   res.status(200);
   res.json({ message: "Hello World" });
